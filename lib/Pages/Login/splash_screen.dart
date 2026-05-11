@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:practice_app/Constant/screens.dart';
-import 'package:practice_app/Controller/splashctrl.dart';
+import 'package:Claimit_app/Constant/screens.dart';
+import 'package:Claimit_app/Controller/splashctrl.dart';
 import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {

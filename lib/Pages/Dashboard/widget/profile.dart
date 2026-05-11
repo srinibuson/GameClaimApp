@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:glass_kit/glass_kit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:practice_app/Constant/screens.dart';
+import 'package:Claimit_app/Constant/screens.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({super.key});

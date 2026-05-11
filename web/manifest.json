@@ -1,6 +1,6 @@
 {
-    "name": "practice_app",
-    "short_name": "practice_app",
+    "name": "Claimit_app",
+    "short_name": "Claimit_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#hexcode",

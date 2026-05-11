@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "638720373032",
+    "project_id": "claimit-f8960",
+    "storage_bucket": "claimit-f8960.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638720373032:android:a7438ca362f1ad8a41601d",
+        "android_client_info": {
+          "package_name": "com.app.Claimit_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFMiPgFbXlRFIsohAJEBIp-HJv2tUrsEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

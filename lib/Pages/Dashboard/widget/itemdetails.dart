@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 import 'package:glass_kit/glass_kit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:marquee/marquee.dart';
-import 'package:practice_app/Constant/screens.dart';
-import 'package:practice_app/Controller/dashboardcrtl.dart';
-import 'package:practice_app/Controller/splashctrl.dart';
+import 'package:Claimit_app/Constant/screens.dart';
+import 'package:Claimit_app/Controller/dashboardcrtl.dart';
+import 'package:Claimit_app/Controller/splashctrl.dart';
 import 'package:provider/provider.dart';
 
 // ignore: must_be_immutable

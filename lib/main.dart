@@ -1,13 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:practice_app/Constant/allroute.dart';
-import 'package:practice_app/Controller/dashboardcrtl.dart';
-import 'package:practice_app/Controller/splashctrl.dart';
-import 'package:practice_app/Controller/themectrl.dart';
-import 'package:practice_app/Pages/Login/splash_screen.dart';
+import 'package:Claimit_app/Constant/allroute.dart';
+import 'package:Claimit_app/Controller/dashboardcrtl.dart';
+import 'package:Claimit_app/Controller/splashctrl.dart';
+import 'package:Claimit_app/Controller/themectrl.dart';
+import 'package:Claimit_app/Pages/Login/splash_screen.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

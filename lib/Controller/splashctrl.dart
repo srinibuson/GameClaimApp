@@ -2,16 +2,16 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:practice_app/Constant/constantroute.dart';
-import 'package:practice_app/Model/giveawaymodel.dart';
-import 'package:practice_app/Service/giveawayapi.dart';
+import 'package:Claimit_app/Constant/constantroute.dart';
+import 'package:Claimit_app/Model/giveawaymodel.dart';
+import 'package:Claimit_app/Service/giveawayapi.dart';
 
 class SplashCtrl extends ChangeNotifier {
   bool loading = false;
   init() async {
     await productApiCall();
     await Future.delayed(Duration(seconds: 2));
-    Get.offAllNamed(ConstantRoute.dashboard);
+    Get.offAllNamed(ConstantRoute.loginpage);
   }
 
   List<GiveawayModel> itemlist = [];

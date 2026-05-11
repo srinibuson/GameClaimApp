@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:glass_kit/glass_kit.dart';
 
-import 'package:practice_app/Constant/screens.dart';
-import 'package:practice_app/Controller/dashboardcrtl.dart';
+import 'package:Claimit_app/Constant/screens.dart';
+import 'package:Claimit_app/Controller/dashboardcrtl.dart';
 import 'package:provider/provider.dart';
 
 class DashboardScreen extends StatefulWidget {

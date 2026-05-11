@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:practice_app/Pages/Dashboard/widget/itempage.dart';
-import 'package:practice_app/Pages/Dashboard/widget/profile.dart';
+import 'package:Claimit_app/Pages/Dashboard/widget/itempage.dart';
+import 'package:Claimit_app/Pages/Dashboard/widget/profile.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Dashboardcrtl extends ChangeNotifier {

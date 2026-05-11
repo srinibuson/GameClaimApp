@@ -1,4 +1,4 @@
-# practice_app
+# Claimit_app
 
 A new Flutter project.
 

@@ -182,9 +182,8 @@ class _LoginScreenState extends State<LoginScreen> {
             key: _formKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 32),
 
+              children: [
                 // ── Logo ──
                 Center(
                   child: Column(
@@ -320,96 +319,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
-                  ),
-                ),
-
-                const SizedBox(height: 24),
-
-                // ── Divider ──
-                Row(
-                  children: [
-                    Expanded(child: Divider(color: Colors.grey[800])),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
-                      child: Text(
-                        'or continue with',
-                        style: TextStyle(color: Colors.grey[600], fontSize: 13),
-                      ),
-                    ),
-                    Expanded(child: Divider(color: Colors.grey[800])),
-                  ],
-                ),
-
-                const SizedBox(height: 20),
-
-                // ── Google Button ──
-                SizedBox(
-                  width: double.infinity,
-                  height: 52,
-                  child: OutlinedButton(
-                    // onPressed: _isLoading ? null : _loginWithGoogle,
-                    onPressed: null,
-                    style: OutlinedButton.styleFrom(
-                      side: BorderSide(color: Colors.grey[800]!),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(14),
-                      ),
-                      backgroundColor: const Color(0xFF1E1E1E),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 20,
-                          height: 20,
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.circle,
-                          ),
-                          child: const Center(
-                            child: Text(
-                              'G',
-                              style: TextStyle(
-                                color: Color(0xFF1A73E8),
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        const Text(
-                          'Sign in with Google',
-                          style: TextStyle(color: Colors.white70, fontSize: 15),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-
-                const SizedBox(height: 32),
-
-                // ── Sign Up Link ──
-                Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Don't have an account? ",
-                        style: TextStyle(color: Colors.grey[600], fontSize: 14),
-                      ),
-                      GestureDetector(
-                        onTap: () => Navigator.pushNamed(context, '/register'),
-                        child: const Text(
-                          'Sign up',
-                          style: TextStyle(
-                            color: Color(0xFF1A73E8),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ),
-                    ],
                   ),
                 ),
               ],

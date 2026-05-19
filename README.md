@@ -148,11 +148,6 @@ Flutter Developer · Building ClaimIt as a portfolio project
 
 [![GitHub](https://img.shields.io/badge/GitHub-srinibuson-181717?style=flat&logo=github)](https://github.com/srinibuson)
 
----
-
-## 📄 License
-
-This project is open source under the [MIT License](LICENSE).
 
 ---
 

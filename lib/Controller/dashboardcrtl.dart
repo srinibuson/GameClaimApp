@@ -11,7 +11,8 @@ class Dashboardcrtl extends ChangeNotifier {
   List<Widget>? nav = [
     ItemsPage(),
     Center(child: Text('Coming Soon', style: TextStyle(color: Colors.white))),
-    SettingPage(),
+    Center(child: Text('Coming Soon', style: TextStyle(color: Colors.white))),
+    // SettingPage(),
   ];
 
   bool liked = false;

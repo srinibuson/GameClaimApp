@@ -35,7 +35,6 @@ class _SplashScreenState extends State<SplashScreen> {
           Center(
             child: Lottie.asset(
               'Assets/loading.json',
-
               height: Screens.padingHeight(context) * 0.15,
             ),
           ),

@@ -14,7 +14,6 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  bool backpress = false;
   @override
   Widget build(BuildContext context) {
     final controller = context.watch<Dashboardcrtl>();
@@ -80,7 +79,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             },
                             child: Image.asset(
                               'Assets/home.png',
-                              color: Colors.white,
+                              color:
+                                  controller.selectedindex == 0
+                                      ? Colors.blueAccent
+                                      : Colors.white,
                             ),
                           ),
                           InkWell(
@@ -91,7 +93,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             },
                             child: Image.asset(
                               'Assets/favorite.png',
-                              color: Colors.white,
+                              color:
+                                  controller.selectedindex == 1
+                                      ? Colors.blueAccent
+                                      : Colors.white,
                             ),
                           ),
                           InkWell(
@@ -103,7 +108,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             child: Image.asset(
                               // scale: 0.5,
                               'Assets/profile3.png',
-                              color: Colors.white,
+                              color:
+                                  controller.selectedindex == 2
+                                      ? Colors.blueAccent
+                                      : Colors.white,
                             ),
                           ),
                         ],

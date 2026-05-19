@@ -20,9 +20,9 @@ ClaimIt aggregates free game giveaways from Epic Games, Steam, itch.io and more 
 
 > Splash · Login · Home Feed
 
-| Splash | Login | Home |
-|--------|-------|------|
-| ![Splash](screenshots/splash.jpg) | ![Login](screenshots/login.jpg) | ![Home](screenshots/home.jpg) |
+| Splash                       | Login                      | Home                     |
+| ---------------------------- | -------------------------- | ------------------------ |
+| ![Splash](Assets/splash.jpg) | ![Login](Assets/login.jpg) | ![Home](Assets/home.jpg) |
 
 ---
 
@@ -50,20 +50,21 @@ ClaimIt aggregates free game giveaways from Epic Games, Steam, itch.io and more 
 
 ## 🛠️ Built With
 
-| Technology | Purpose |
-|---|---|
-| Flutter | Cross-platform UI |
-| Firebase Auth | User authentication |
-| Cloud Firestore | Saved items storage |
-| GamerPower API | Live giveaway data |
-| GetX | Navigation & routing |
-| url_launcher | Deep link to stores |
+| Technology      | Purpose              |
+| --------------- | -------------------- |
+| Flutter         | Cross-platform UI    |
+| Firebase Auth   | User authentication  |
+| Cloud Firestore | Saved items storage  |
+| GamerPower API  | Live giveaway data   |
+| GetX            | Navigation & routing |
+| url_launcher    | Deep link to stores  |
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Flutter SDK `>=3.0.0`
 - Android device or emulator
 - Firebase project (see setup below)
@@ -71,12 +72,14 @@ ClaimIt aggregates free game giveaways from Epic Games, Steam, itch.io and more 
 ### Installation
 
 **1. Clone the repo**
+
 ```bash
 git clone https://github.com/srinibuson/GameClaimApp.git
 cd GameClaimApp
 ```
 
 **2. Install dependencies**
+
 ```bash
 flutter pub get
 ```
@@ -89,6 +92,7 @@ flutter pub get
 - Download `google-services.json` and place it in `android/app/`
 
 **4. Run the app**
+
 ```bash
 flutter run
 ```
@@ -106,9 +110,11 @@ flutter run
 ## 📡 API Used
 
 **GamerPower API** — Free, no key required
+
 ```
 https://www.gamerpower.com/api/giveaways
 ```
+
 Returns active giveaways with title, thumbnail, worth, end date, platform, and claim URL.
 
 ---
@@ -147,7 +153,6 @@ Feel free to fork and build your own version!
 Flutter Developer · Building ClaimIt as a portfolio project
 
 [![GitHub](https://img.shields.io/badge/GitHub-srinibuson-181717?style=flat&logo=github)](https://github.com/srinibuson)
-
 
 ---
 

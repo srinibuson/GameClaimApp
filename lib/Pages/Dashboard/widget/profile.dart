@@ -5,14 +5,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:Claimit_app/Constant/screens.dart';
 import 'package:provider/provider.dart';
 
-class SettingPage extends StatefulWidget {
-  const SettingPage({super.key});
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({super.key});
 
   @override
-  State<SettingPage> createState() => _SettingPageState();
+  State<ProfilePage> createState() => _ProfilePageState();
 }
 
-class _SettingPageState extends State<SettingPage> {
+class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);

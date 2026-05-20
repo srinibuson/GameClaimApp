@@ -1,5 +1,4 @@
-import 'dart:developer';
-
+import 'package:Claimit_app/Pages/widget/liked.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:glass_kit/glass_kit.dart';
@@ -7,13 +6,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:marquee/marquee.dart';
 import 'package:Claimit_app/Constant/screens.dart';
 import 'package:Claimit_app/Controller/dashboardcrtl.dart';
-import 'package:Claimit_app/Controller/splashctrl.dart';
 import 'package:provider/provider.dart';
 
 // ignore: must_be_immutable
 class ItemDetailsPage extends StatefulWidget {
-  const ItemDetailsPage({super.key});
-  static int? index;
+  const ItemDetailsPage({super.key, this.gameData});
+  // final int? index;
+  final Map<String, dynamic>? gameData;
   @override
   State<ItemDetailsPage> createState() => _ItemDetailsPageState();
 }
@@ -22,7 +21,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final list = context.watch<SplashCtrl>().itemlist[ItemDetailsPage.index!];
+    // final list = context.watch<SplashCtrl>().itemlist[widget.index!];
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -38,7 +37,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
           // color: Colors.red,
           height: Screens.padingHeight(context) * 0.025,
           child: Marquee(
-            text: list.title,
+            text: widget.gameData!['title'],
 
             style: theme.textTheme.bodyMedium!.copyWith(
               fontSize: 16,
@@ -71,7 +70,10 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
 
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(5),
-                    child: Image.network(list.image, fit: BoxFit.cover),
+                    child: Image.network(
+                      widget.gameData!['image'],
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
 
@@ -85,9 +87,8 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
 
                       child: GestureDetector(
                         onTap: () {
-                          log('Claimable');
                           context.read<Dashboardcrtl>().openLink(
-                            list.openGiveawayUrl,
+                            widget.gameData!['open_giveaway'],
                           );
                         },
 
@@ -123,26 +124,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                       ),
                     ),
 
-                    GestureDetector(
-                      onTap: () {
-                        context.read<Dashboardcrtl>().likedPress();
-                      },
-                      child: Container(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: Screens.width(context) * 0.05,
-                        ),
-                        child: Icon(
-                          context.watch<Dashboardcrtl>().liked == true
-                              ? Icons.favorite
-                              : Icons.favorite_border,
-                          color:
-                              context.watch<Dashboardcrtl>().liked == true
-                                  ? Colors.pinkAccent
-                                  : Colors.white,
-                          size: 30,
-                        ),
-                      ),
-                    ),
+                    LikeButton(gameData: widget.gameData!),
                   ],
                 ),
 
@@ -155,7 +137,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                   ),
 
                   child: Text(
-                    list.description,
+                    widget.gameData!['description'],
                     textAlign: TextAlign.justify,
                     maxLines: 6,
                     overflow: TextOverflow.ellipsis,
@@ -186,7 +168,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                       // color: Colors.red,
                       width: Screens.width(context) * 0.9,
                       child: Text(
-                        '    ${list.platforms}',
+                        '    ${widget.gameData!['platforms']}',
 
                         style: theme.textTheme.bodyMedium!.copyWith(
                           fontSize: 14,
@@ -217,9 +199,9 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                       // color: Colors.red,
                       width: Screens.width(context) * 0.9,
                       child: Text(
-                        list.endDate.toLowerCase() == 'n/a'
+                        widget.gameData!['end_date'].toLowerCase() == 'n/a'
                             ? '    Soon'
-                            : '    ${list.endDate}',
+                            : '    ${widget.gameData!['end_date']}',
 
                         style: theme.textTheme.bodyMedium!.copyWith(
                           fontSize: 14,
@@ -259,7 +241,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                             borderRadius: BorderRadius.circular(5),
                           ),
                           child: Text(
-                            list.type,
+                            widget.gameData!['type'],
 
                             style: theme.textTheme.bodyMedium!.copyWith(
                               fontSize: 14,
@@ -300,7 +282,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                             ),
                           ),
                           TextSpan(
-                            text: list.worth,
+                            text: widget.gameData!['worth'],
                             style: theme.textTheme.bodyMedium!.copyWith(
                               fontSize: 14,
                               color: Colors.white,
@@ -413,7 +395,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
 
                           children: [
                             Text(
-                              ' ${list.status}',
+                              ' ${widget.gameData!['status']}',
 
                               style: theme.textTheme.bodyMedium!.copyWith(
                                 fontSize: 14,
@@ -426,7 +408,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                               height: Screens.padingHeight(context) * 0.005,
                             ),
                             Text(
-                              ' ${list.users}',
+                              ' ${widget.gameData!['users']}',
 
                               style: theme.textTheme.bodyMedium!.copyWith(
                                 fontSize: 14,

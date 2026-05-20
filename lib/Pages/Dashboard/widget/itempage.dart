@@ -53,8 +53,11 @@ class _ItemsPageState extends State<ItemsPage> {
               final lists = controller.itemlist[index];
               return InkWell(
                 onTap: () {
-                  ItemDetailsPage.index = index;
-                  Get.toNamed(ConstantRoute.itemdetails);
+                  Get.to(
+                    () => ItemDetailsPage(gameData: lists.toMap()),
+                    transition: Transition.cupertino,
+                    duration: Duration(seconds: 2),
+                  );
                 },
                 child: Container(
                   decoration: BoxDecoration(

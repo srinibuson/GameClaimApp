@@ -90,4 +90,21 @@ class GiveawayModel {
       gamerpowerUrl: json['gamerpower_url'],
     );
   }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'title': title,
+      'thumbnail': thumbnail,
+      'image': image,
+      'description': description,
+      'platforms': platforms,
+      'end_date': endDate,
+      'type': type,
+      'worth': worth,
+      'status': status,
+      'users': users,
+      'open_giveaway': openGiveawayUrl,
+    };
+  }
 }

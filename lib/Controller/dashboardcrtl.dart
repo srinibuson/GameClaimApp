@@ -1,6 +1,7 @@
 import 'package:Claimit_app/Constant/constantroute.dart';
 import 'package:Claimit_app/Constant/helper.dart';
 import 'package:Claimit_app/Constant/screens.dart';
+import 'package:Claimit_app/Pages/Dashboard/widget/favourite.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -20,9 +21,9 @@ class Dashboardcrtl extends ChangeNotifier {
   int selectedindex = 0;
   List<Widget>? nav = [
     ItemsPage(),
-    Center(child: Text('Coming Soon', style: TextStyle(color: Colors.white))),
     // Center(child: Text('Coming Soon', style: TextStyle(color: Colors.white))),
-    SettingPage(),
+    FavouritesScreen(),
+    ProfilePage(),
   ];
 
   bool liked = false;

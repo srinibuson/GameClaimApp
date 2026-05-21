@@ -37,16 +37,6 @@ ClaimIt aggregates free game giveaways from Epic Games, Steam, itch.io and more 
 
 ---
 
-## 🚧 In Progress
-
-- [ ] FreeToGame API integration (Browse F2P games)
-- [ ] IsThereAnyDeal API (Discounted deals tab)
-- [ ] Platform filter chips (Epic / Steam / itch.io)
-- [ ] Ending soon urgency strip
-- [ ] Google Sign-In
-
----
-
 ## 🛠️ Built With
 
 | Technology      | Purpose              |
